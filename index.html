@@ -10,38 +10,49 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cont">
-      <header>
+    <div class="header top-header py-4 bg-light">
+      <div class="container text-center">
         <h1>Wiki Hongos</h1>
-      </header>
-
-      <ul class="nav">
-        <li class="nav-item">
-			<a class="nav-link" href="#">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Features</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Reproduction</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#">Nutritious</a>
-		  </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Poisonous</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-
-      <div class="sec-text" id="caracteristicas">
-        <h2>Caracteristicas</h2>
-        <div>
+      </div>
+    </div>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Reproduction</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Category
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Nutritious</a></li>
+          <li><a class="dropdown-item" href="#">Poisonous</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="row" id="caracteristicas">
+        <div class="col">
+          <h2>Caracteristicas</h2>
           <p>
             Antes del desarrollo de los análisis moleculares de ARN y su
             aplicación en la dilucidación de la filogenia del grupo, los
@@ -71,21 +82,15 @@
             energía y poder reductor compuestos orgánicos.
           </p>
         </div>
-      </div>
-      <div class="sec-img">
-        <h2>Clasificacion tradicional</h2>
-        <img src=".\img\hongo.jpg" alt="" />
-        <p>Omphalotus nidiformis, un hongo bioluminiscente.</p>
+        <div class="col">
+          <img src=".\img\hongo.jpg" alt="" />
+          <p>Omphalotus nidiformis, un hongo bioluminiscente.</p>
+        </div>
       </div>
 
-      <div class="sec-img">
-        <h2>Dispersion de esporas</h2>
-        <img src=".\img\hongo2.jpg" alt="" />
-        <p>Los hongos se reproducen dispersando sus esporas.</p>
-      </div>
-      <div class="sec-text" id="reproduccion">
-        <h2>Reproduccion</h2>
-        <div>
+      <div class="row" id="reproduccion">
+        <div class="col">
+          <h2>Reproduccion</h2>
           <p>
             Los hongos se reproducen sobre todo por medio de esporas, las cuales
             se dispersan en un estado latente, que se interrumpe solo cuando se
@@ -113,6 +118,12 @@
             cuerpos fructíferos, los cuales, como indica el nombre, sirven para
             portar los esporangios que producen las esporas.
           </p>
+        </div>
+      </div>
+      <div class="row" id="rep-img">
+        <div class="col">
+          <img src=".\img\hongo2.jpg" alt="" />
+          <p>Los hongos se reproducen dispersando sus esporas.</p>
         </div>
       </div>
 
@@ -187,31 +198,45 @@
         </div>
       </div>
 
-      <div id="contacto">
-        <h2>Contacto</h2>
-        <div class="fm">
-          <form action="">
-            <input type="text" id="nombre" placeholder="Nombre completo" />
-            <br />
-            <input type="email" id="correo" placeholder="Correo" />
-            <br />
-            <input type="number" id="telefono" placeholder="Telefono" />
-            <br />
-            <textarea
-              name="mensaje"
-              id="msj"
-              cols="30"
-              rows="10"
-              placeholder="Deje un mensaje"
-            ></textarea>
-            <br />
-            <input type="submit" id="enviar" />
-          </form>
+      <div class="row justify-content-center my-5" id="contact">
+        <div class="col-8">
+          <h3>Contact Us</h3>
+          <div class="row">
+            <form action="">
+              <div class="col">
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="floatingname"
+                    placeholder="Nombre"
+                  />
+                  <label for="floatingname">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="floatingInput"
+                    placeholder="name@example.com"
+                  />
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    id="floatingtxt"
+                    class="form-control"
+                    placeholder="asc"
+                  ></textarea>
+                  <label for="floatingtxt">Mensaje</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-
-      <footer>
-        <p>Footer</p>
+      <footer class="bg-white container-fluid text-center mt-2 mb-2">
+        <p>&copy Nahuel Avila</p>
       </footer>
     </div>
 
